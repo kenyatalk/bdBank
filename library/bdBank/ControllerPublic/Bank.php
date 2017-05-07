@@ -162,7 +162,7 @@ class bdBank_ControllerPublic_Bank extends XenForo_ControllerPublic_Abstract
             }
 
             // prepare data for transfer() calls
-            $personal = bdBank_Model_Bank::getInstance()->personal();
+            $personal = $this->getModelFromCache('bdBank_Model_Personal');
 
             // default
             $taxMode = bdBank_Model_Bank::TAX_MODE_RECEIVER_PAY;
